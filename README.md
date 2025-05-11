@@ -1,0 +1,2 @@
+# GeneradorDeContrasenas
+(codigo con copyright)
