@@ -1,8 +1,61 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 2 may 2025, 13:10:01
-    Author     : javim
-*/
+/* Estilo general para el fondo */
+.root {
+    -fx-background-color: white;
+}
+
+/* Estilo para los Labels */
+.label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+}
+
+/* Estilo específico para los labels principales */
+#textoA, #textoB, #textoC {
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-text-fill: #2c3e50;
+}
+
+#boton1, #boton2{
+    -fx-background-color: #6dff94;
+    -fx-font-size: 14px;
+}
+
+/* Estilo para los RadioButtons */
+.radio-button {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 5px;
+}
+
+/* Estilo para el círculo del RadioButton no seleccionado */
+.radio-button .dot {
+    -fx-mark-highlight-color: #3498db;
+    -fx-mark-color: #3498db;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: #3498db;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+}
+
+/* Estilo para el RadioButton seleccionado */
+.radio-button:selected .dot {
+    -fx-background-color: #3498db;
+    -fx-background-insets: 0;
+}
+
+/* Efecto hover para los RadioButtons */
+.radio-button:hover {
+    -fx-text-fill: #2980b9;
+    -fx-cursor: hand;
+}
+
+/* Estilo para el foco */
+.radio-button:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
