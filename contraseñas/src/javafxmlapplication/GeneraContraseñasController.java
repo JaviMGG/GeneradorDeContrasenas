@@ -32,12 +32,16 @@ public class GeneraContraseñasController implements Initializable {
     @FXML
     private Label textoB;
     @FXML
-    private RadioButton boton1;
+    private Button boton1;
     @FXML
-    private RadioButton boton2;
+    private Button boton2;
     public static String ultimaRes = "";
     @FXML
     private Label textoC;
+    @FXML
+    private RadioButton boton1Ayuda;
+    @FXML
+    private RadioButton boton2Ayuda;
     /**
      * Initializes the controller class.
      */
@@ -64,9 +68,9 @@ public class GeneraContraseñasController implements Initializable {
             // Crear nueva ventana
             Stage stage = new Stage();
             TextArea textArea = new TextArea(contenido);
-            javafx.scene.Scene scene = new javafx.scene.Scene(textArea, 600, 400);
+            javafx.scene.Scene scene = new javafx.scene.Scene(textArea, 700, 50);
             
-            stage.setTitle("ÚLTIMA CONTRASEÑA GENERADA: ");
+            stage.setTitle("ÚLTIMA CONTRASEÑA GENERADA, por favor, copiala con Control+C ");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -81,7 +85,7 @@ public class GeneraContraseñasController implements Initializable {
 
     @FXML
     private void mostrar_texto_crear(ActionEvent event) {
-        if(boton1.isSelected()){
+        if(boton1Ayuda.isSelected()){
             textoA.setVisible(true);
         }
         else{
@@ -91,7 +95,7 @@ public class GeneraContraseñasController implements Initializable {
 
     @FXML
     private void mostrar_texto_historial(ActionEvent event) {
-        if(boton2.isSelected()){
+        if(boton2Ayuda.isSelected()){
             textoB.setVisible(true);
             textoC.setVisible(true);
         }
@@ -127,7 +131,7 @@ public class GeneraContraseñasController implements Initializable {
 
             // Escribir en el archivo
                 PrintWriter pw = new PrintWriter("contraseñas.txt");
-                pw.println("Tu nueva contraseña es:    " + res + "    y fue creada el " + fecha);
+                pw.println("Tu nueva contraseña es:    " + res + "    .Fue creada el " + fecha);
                 pw.flush();
                 pw.close();
                 ultimaRes = res;
